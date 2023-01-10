@@ -1,6 +1,4 @@
 ---
-env:
-  GITHUB_TOKEN: ${{ github.token }}
 name: module3_task4
 "on":
   push:
