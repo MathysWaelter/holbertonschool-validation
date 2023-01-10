@@ -1,3 +1,4 @@
+
 ---
 env:
   GH_TOKEN: ${{ github.token }}
@@ -7,10 +8,10 @@ name: module3_task4
     tags: "1.0.1"
     branches:
       - main
-  pull_request:
-    types: [opened, reopened, synchronize]
   schedule:
     - cron: '0 0 * * *'
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 permissions: read-all
 
@@ -31,7 +32,7 @@ jobs:
         run: npm install -g markdownlint-cli
       - name: Validate Makefile help
         run: |
-          cd module3_task4
+          cd module3_task2
           make lint
           make build
           make package
@@ -51,6 +52,7 @@ jobs:
             What are the commands to start and stop the application? tag
             How to customize where the application logs are written?
             How to verify that the application is running (healthcheck)?
-      - run: gh release create v1.0.1 --title "v1.0.1" \
-          --notes DEPLOY.md 2>/dev/null || echo "OK"
-      - uses: release-drafter/release-drafter@v5
+      - run: gh release create v1.0.1 --title "v1.0.1" --notes DEPLOY.md\
+            2>/dev/null || echo "OK"
+      - name: release drafter
+        uses: release-drafter/release-drafter@v5
