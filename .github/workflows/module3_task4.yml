@@ -7,8 +7,8 @@ name: module3_task4
     tags: "1.0.1"
     branches:
       - main
-    pull_request:
-      types: [opened, reopened, synchronize]
+  pull_request:
+    types: [opened, reopened, edited, ready_for_previews]
   schedule:
     - cron: '0 0 * * *'
 
