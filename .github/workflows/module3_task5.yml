@@ -65,6 +65,8 @@ jobs:
           enable-commit-comment: true
           production-branch: main
           overwrite-pull-request-comment: true
+          publish-message: '🎉 Published on'
+          deploy-message: '🚀 Deployed on'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
