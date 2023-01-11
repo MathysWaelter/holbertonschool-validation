@@ -1,7 +1,7 @@
 ---
 env:
   GH_TOKEN: ${{ github.token }}
-name: module3_task4
+name: module3_task5
 "on":
   push:
     tags: "1.0.1"
@@ -26,14 +26,14 @@ jobs:
         with:
           node-version: 16
       - name: install hugo
-        run: cd module3_task4 && ./setup.sh
+        run: cd module3_task5 && ./setup.sh
       - name: install markdown
         run: npm install -g markdownlint-cli
       - name: install netlify
         run: npm install netlify-cli -g
       - name: Validate Makefile help
         run: |
-          cd module3_task2
+          cd module3_task5
           make lint
           make build
           make package
