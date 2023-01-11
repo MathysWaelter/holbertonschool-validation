@@ -67,6 +67,7 @@ jobs:
           overwrite-pull-request-comment: true
           publish-message: '🎉 Published on'
           deploy-message: '🚀 Deployed on'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
