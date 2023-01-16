@@ -20,4 +20,4 @@ clean:  ## Delete content of dist folder
 	@pgrep awesome-api | xargs kill
 
 lint: ## Check with golint
-	@golangci-lint run >/dev/null 2>&1 &
+	@golangci-lint run >/dev/null 2>&1
