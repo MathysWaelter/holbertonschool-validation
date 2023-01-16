@@ -5,8 +5,7 @@ help: ## Show help command
 	@sed -ne '/@sed/!s/## //p' Makefile
 
 build:  ## Create Website
-	@make lint
-	@go build
+	@make lint | go build
 
 run: ## Run the application
 	@./awesome-api >./awesome.log 2>&1 &
