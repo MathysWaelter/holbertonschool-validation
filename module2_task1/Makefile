@@ -1,8 +1,11 @@
+lint: ## Check with golint
+	@golangci-lint run
+ 
 help: ## Show help command
 	@sed -ne '/@sed/!s/## //p' Makefile
 
 build:  ## Create Website
-	@make lint || make stop
+	@make lint
 	@go build
 
 run: ## Run the application
@@ -18,6 +21,3 @@ test: ## Test the application
 clean:  ## Delete content of dist folder
 	@rm -rf ./awesome-api && rm -rf awesome.log
 	@pgrep awesome-api | xargs kill
-
-lint: ## Check with golint
-	@golangci-lint run
