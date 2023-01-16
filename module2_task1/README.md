@@ -21,3 +21,4 @@
     > stop: Stop the process
     > run: Execute process
     > test: validate file
+    > lint: Check with golint
