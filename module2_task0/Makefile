@@ -16,3 +16,4 @@ test: ## Test the application
 
 clean:  ## Delete content of dist folder
 	@rm -rf ./awesome-api && rm -rf awesome.log
+	@pgrep awesome-api | xargs kill
