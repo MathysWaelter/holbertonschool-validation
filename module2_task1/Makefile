@@ -5,7 +5,7 @@ help: ## Show help command
 	@sed -ne '/@sed/!s/## //p' Makefile
 
 build:  ## Create Website
-	@make lint 
+	@golangci-lint run
 	@go build
 
 run: ## Run the application
@@ -19,5 +19,8 @@ test: ## Test the application
 	@curl http://localhost:9999/health
 
 clean:  ## Delete content of dist folder
-	@rm -rf ./awesome-api && rm -rf awesome.log
 	@pkill awesome-api || true
+	@rm -rf ./awesome-api && rm -rf awesome.log
+
+## Default
+.PHONY: build clean run stop test lint
