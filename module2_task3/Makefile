@@ -30,4 +30,4 @@ integration-tests: ## intergrations test for application
 	@go test -v -tags=integration -coverprofile=coverage-integrations.out
 
 ## Default
-.PHONY: build clean run stop test lint unit-tests
+.PHONY: build clean run stop test lint unit-tests integration-tests
