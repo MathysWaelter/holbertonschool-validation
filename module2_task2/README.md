@@ -22,3 +22,4 @@
     > run: Execute process
     > test: validate file
     > lint: Check with golint
+    > unit-tests: test app
