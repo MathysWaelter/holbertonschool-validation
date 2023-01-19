@@ -2,7 +2,6 @@ help: ## Show help command
 	@sed -ne '/@sed/!s/## //p' Makefile
 
 build:  ## Create Website
-	@make check
 	@hugo
 
 clean:  ## Delete content of dist folder
@@ -18,4 +17,4 @@ check: ## check with markdown
 
 validate: ## validate with W3C
 	@make build
-	@./w3c_validator.py dist/index.html || true
+	@./w3c_validator.py ./dist/index.html || true
