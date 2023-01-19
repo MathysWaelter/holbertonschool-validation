@@ -2,6 +2,7 @@ help: ## Show help command
 	@sed -ne '/@sed/!s/## //p' Makefile
 
 build:  ## Create Website
+	@make check
 	@hugo
 
 clean:  ## Delete content of dist folder
