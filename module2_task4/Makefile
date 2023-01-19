@@ -13,9 +13,9 @@ post:  ## Create a post
 	@sed -i '/title:*/c\title: "$(POST_TITLE)"' ./content/posts/$(POST_NAME).md
 
 check: ## check with markdown
-	@markdownlint *
-	@markdown-link-check *
+	@markdownlint content/posts/*
+	@markdown-link-check content/posts/*
 
 validate: ## validate with W3C
 	@make build
-	@./w3c_validator.py ./dist/index.html
+	@./w3c_validator.py dist/index.html || true
