@@ -11,7 +11,7 @@ post:  ## Create a post
 	@hugo new ./content/posts/$(POST_NAME).md
 	@sed -i '/title:*/c\title: "$(POST_TITLE)"' ./content/posts/$(POST_NAME).md
 
-check: ##check with markdown
+check: ## check with markdown
 	@markdownlint *
 	@markdown-link-check *
 
