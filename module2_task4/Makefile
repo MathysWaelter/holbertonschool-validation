@@ -17,4 +17,5 @@ check: ## check with markdown
 	@markdown-link-check *
 
 validate: ## validate with W3C
+	@make build
 	@./w3c_validator.py ./dist/index.html
