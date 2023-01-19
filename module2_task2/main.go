@@ -63,10 +63,10 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 	}
   
 	// Set a default value if the name is empty
-	if name == "" {
-	  name = "there"
-	}
-  
+	if queryParams["name"] != nil && name == "" {
+        w.WriteHeader(400)
+        return
+      }
 	// Write the string "Hello <name>" into the response's body
 	_, _ = io.WriteString(w, fmt.Sprintf("Hello %s!", name))
   
