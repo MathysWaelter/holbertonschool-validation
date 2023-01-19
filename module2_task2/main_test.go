@@ -43,6 +43,12 @@ func Test_HelloHandler(t *testing.T) {
       body:         "Hello !",
     },
     {
+      name:         "hello1",
+      queryString:  "?",
+      responseCode: 200,
+      body:         "Hello !",
+    },
+    {
       name:         "hello2",
       queryString:  "hello?name=Grace&name=Ane",
       responseCode: 200,
@@ -56,6 +62,11 @@ func Test_HelloHandler(t *testing.T) {
     {
       name:         "hello4",
       queryString:  "name=",
+      responseCode: 400,
+    },
+    {
+      name:         "hello4",
+      queryString:  "name=&name=",
       responseCode: 400,
     },
     {
